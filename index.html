@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOUZA E RIBEIRO SOCIEDADE DE ADVOGADOS | Atendimento e Serviços Advocatícios</title>
+  <meta name="description" content="SOUZA E RIBEIRO SOCIEDADE DE ADVOGADOS - Serviços advocatícios, 2ª via, quitação de contrato e atendimento especializado. Goiânia - GO.">
+  <link rel="canonical" href="https://arcorretora.pro/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="SOUZA E RIBEIRO SOCIEDADE DE ADVOGADOS">
+  <meta property="og:description" content="Atendimento, 2ª via, quitação de contrato e serviços advocatícios.">
+  <meta property="og:url" content="https://arcorretora.pro/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0051FA">
+  <style>
+    :root {
+      --primary: #0051FA;
+      --primary-dark: #003bb8;
+      --secondary: #6682BD;
+      --accent: #44961E;
+      --accent-hover: #367818;
+      --white: #ffffff;
+      --light: #f5f8ff;
+      --gray: #e8eef8;
+      --text: #1a1a2e;
+      --text-muted: #5a6a85;
+      --shadow: 0 8px 30px rgba(0, 81, 250, 0.12);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #0039c8 100%);
+      color: var(--white);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0, 81, 250, 0.25);
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .logo-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+    }
+
+    .logo-sub {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    .header-cta {
+      background: var(--white);
+      color: var(--primary);
+      padding: 0.65rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(160deg, var(--primary) 0%, #0040d4 45%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 4.5rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 350px;
+      height: 350px;
+      background: rgba(68, 150, 30, 0.15);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--primary);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 6px 20px rgba(68, 150, 30, 0.35);
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    /* ========== SERVIÇOS / BOTÕES ========== */
+    .services {
+      padding: 4.5rem 0;
+      background: var(--light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.75rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.85rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 1px solid rgba(0, 81, 250, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(0, 81, 250, 0.18);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.15rem;
+      color: var(--white);
+    }
+
+    .service-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.35rem;
+      flex-grow: 1;
+    }
+
+    .btn-service {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.7rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      width: 100%;
+      max-width: 220px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-service:hover {
+      background: var(--primary-dark);
+      transform: scale(1.03);
+    }
+
+    /* ========== DESTAQUE ATENDIMENTO ========== */
+    .atendimento {
+      padding: 4.5rem 0;
+      background: var(--white);
+    }
+
+    .atendimento-box {
+      background: linear-gradient(135deg, var(--primary) 0%, #003bb8 100%);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 16px 50px rgba(0, 81, 250, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .atendimento-box::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 280px;
+      height: 280px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    .atendimento-text h2 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .atendimento-text p {
+      opacity: 0.92;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      max-width: 480px;
+    }
+
+    .atendimento-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--primary);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .atendimento-visual {
+      position: relative;
+      z-index: 2;
+    }
+
+    .whatsapp-big {
+      width: 100px;
+      height: 100px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      animation: pulse 2.5s infinite;
+    }
+
+    .whatsapp-big svg {
+      width: 52px;
+      height: 52px;
+      fill: white;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45); }
+      50% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.7), 0 0 0 16px rgba(37, 211, 102, 0.15); }
+    }
+
+    /* ========== SOBRE ========== */
+    .sobre {
+      padding: 4.5rem 0;
+      background: var(--light);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .sobre-content h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .sobre-content p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 1.02rem;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .info-list li svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .sobre-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--primary);
+    }
+
+    .sobre-card h3 {
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .sobre-card .cnpj {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      background: var(--gray);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-family: monospace;
+    }
+
+    /* ========== CTA FINAL ========== */
+    .cta-final {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta-final h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .cta-final p {
+      opacity: 0.92;
+      margin-bottom: 1.75rem;
+      font-size: 1.1rem;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #0d1b3e;
+      color: rgba(255,255,255,0.85);
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand h3 {
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    .footer-col a:hover {
+      opacity: 1;
+      color: #7eb0ff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    /* ========== WHATSAPP FLUTUANTE ========== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      width: 64px;
+      height: 64px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+      transition: transform 0.25s, box-shadow 0.25s;
+      animation: floatPulse 2.8s ease-in-out infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.65);
+    }
+
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+      fill: white;
+    }
+
+    @keyframes floatPulse {
+      0%, 100% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 6px 28px rgba(37, 211, 102, 0.7), 0 0 0 12px rgba(37, 211, 102, 0.12); }
+    }
+
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 76px;
+      background: #111;
+      color: white;
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+
+    .whatsapp-float:hover .whatsapp-tooltip {
+      opacity: 1;
+    }
+
+    .whatsapp-tooltip::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-left-color: #111;
+    }
+
+    /* ========== RESPONSIVO ========== */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo-name {
+        font-size: 1rem;
+      }
+
+      .hero {
+        padding: 3.5rem 0 4rem;
+      }
+
+      .atendimento-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2.25rem 1.5rem;
+      }
+
+      .atendimento-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .atendimento-actions {
+        justify-content: center;
+      }
+
+      .atendimento-visual {
+        display: flex;
+        justify-content: center;
+      }
+
+      .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        text-align: center;
+      }
+
+      .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        width: 58px;
+        height: 58px;
+      }
+
+      .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .whatsapp-tooltip {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-name">SOUZA E RIBEIRO</span>
+        <span class="logo-sub">SOCIEDADE DE ADVOGADOS</span>
+      </div>
+      <a href="https://wa.me/5511994821784?text=Olá!%20Gostaria%20de%20atendimento." class="header-cta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Atendimento
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="hero-badge">Serviços Advocatícios • Goiânia - GO</span>
+      <h1>Atendimento especializado para resolver sua situação com agilidade</h1>
+      <p>2ª via, quitação de contrato, renegociação e suporte jurídico. Fale agora com nossa equipe pelo WhatsApp.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5511994821784?text=Olá!%20Preciso%20de%20atendimento." class="btn btn-primary" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-title">
+        <h2>Como podemos ajudar você?</h2>
+        <p>Escolha a opção desejada e fale diretamente com nosso atendimento pelo WhatsApp.</p>
+      </div>
+      <div class="services-grid">
+
+        <!-- 2ª Via -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro
